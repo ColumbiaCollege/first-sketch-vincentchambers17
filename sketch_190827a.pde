@@ -1,15 +1,27 @@
-// Sets up the canvas
+/*
+Vincent Chambers
+8/27/19
+First Lecture
+*/
+
+//function to set stuff up
 void setup() {
+  // Setup the canvas for the window
   size(480, 120);
+  // end of the setup function
 }
 
-//Draw Method
+
+// function to draw stuff
 void draw() {
-  //If Mouse is pressed
+  // if the mouse is pressed, fill set fill to grayscale value of 0.
   if (mousePressed) {
-    // set fill value to #40B938
-    fill(#40B938);
-    // Create an ellipse with a scale of 10 at position of mouse (when clicked).
-    ellipse(mouseX, mouseY, 10, 10);
+    fill(0);
+    // if the mouse isn't pressed, fill the shape with grayscale value of 255.
+  } else {
+    fill(255);
   }
+  
+  //Creates a primitive (ellipse) at the position of the mouse with a scale of 80.
+  ellipse(mouseX, mouseY, 80, 80);
 }
